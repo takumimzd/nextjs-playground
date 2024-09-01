@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { Route } from "next";
 
 /**
  * Redirects to a specified path with an encoded message as a query parameter.
@@ -9,7 +10,7 @@ import { redirect } from "next/navigation";
  */
 export function encodedRedirect(
   type: "error" | "success",
-  path: string,
+  path: Route,
   message: string,
 ) {
   return redirect(`${path}?${type}=${encodeURIComponent(message)}`);

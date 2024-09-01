@@ -1,4 +1,4 @@
-import { resetPasswordAction } from "@/app/actions";
+import { resetPassword } from "./_actions/reset-password";
 import { FormMessage, Message } from "@/components/form-message";
 import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
@@ -29,7 +29,7 @@ export default async function ResetPassword({
         placeholder="Confirm password"
         required
       />
-      <SubmitButton formAction={resetPasswordAction}>
+      <SubmitButton formAction={resetPassword}>
         Reset password
       </SubmitButton>
       <FormMessage message={searchParams} />

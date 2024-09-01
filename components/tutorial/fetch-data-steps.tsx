@@ -1,3 +1,5 @@
+"use client"
+
 import { TutorialStep } from "./tutorial-step";
 import { CodeBlock } from "./code-block";
 

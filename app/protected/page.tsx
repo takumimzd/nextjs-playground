@@ -1,4 +1,5 @@
 import FetchDataSteps from "@/components/tutorial/fetch-data-steps";
+import { pagesPath } from "@/utils/path/$path";
 import { createClient } from "@/utils/supabase/server";
 import { InfoIcon } from "lucide-react";
 import { redirect } from "next/navigation";
@@ -11,7 +12,7 @@ export default async function ProtectedPage() {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return redirect("/sign-in");
+    return redirect(pagesPath.sign_in.$url().pathname);
   }
 
   return (
