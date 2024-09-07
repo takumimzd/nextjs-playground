@@ -17,6 +17,18 @@ export const pagesPath = {
     $url: (url?: { hash?: string }) => ({ pathname: '/sign-up' as const, hash: url?.hash, path: `/sign-up${buildSuffix(url)}` })
   },
   "protected": {
+    "parallel_routes": {
+      "@parallel1": {
+        "paralell3": {
+          $url: (url?: { hash?: string }) => ({ pathname: '/protected/parallel-routes/@parallel1/paralell3' as const, hash: url?.hash, path: `/protected/parallel-routes/@parallel1/paralell3${buildSuffix(url)}` })
+        },
+        $url: (url?: { hash?: string }) => ({ pathname: '/protected/parallel-routes/@parallel1' as const, hash: url?.hash, path: `/protected/parallel-routes/@parallel1${buildSuffix(url)}` })
+      },
+      "@parallel2": {
+        $url: (url?: { hash?: string }) => ({ pathname: '/protected/parallel-routes/@parallel2' as const, hash: url?.hash, path: `/protected/parallel-routes/@parallel2${buildSuffix(url)}` })
+      },
+      $url: (url?: { hash?: string }) => ({ pathname: '/protected/parallel-routes' as const, hash: url?.hash, path: `/protected/parallel-routes${buildSuffix(url)}` })
+    },
     "reset_password": {
       $url: (url?: { hash?: string }) => ({ pathname: '/protected/reset-password' as const, hash: url?.hash, path: `/protected/reset-password${buildSuffix(url)}` })
     },
